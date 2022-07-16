@@ -1,4 +1,4 @@
-"""restaurnt URL Configuration
+"""restaurant URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from menu.routers import router
+from menu.views import redirect_view
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
+    path('', redirect_view),
     path('api/', include((router.urls, 'restaurant'), namespace='restaurant'))
 ]

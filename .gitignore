@@ -1,0 +1,5 @@
+
+restaurant-menu-front/node_modules
+restaurant-api/menu/__pycache__/
+restaurant-api/restaurant/__pycache__/
+restaurant-api/.env
